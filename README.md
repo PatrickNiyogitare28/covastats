@@ -1,5 +1,5 @@
 # covstats
-IOs & Android real time app to track the covid 19 status world wide
+<img src="https://emoji.slack-edge.com/TGT6YF2J1/flutter/a32a20c18ed7e072.png" width="30px">  IOs & Android real time app to track the covid 19 status world wide 
 
 
 
