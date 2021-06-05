@@ -12,5 +12,5 @@ IOs & Android real time app to track the covid 19 status world wide
 <img src="https://github.com/PatrickNiyogitare28/covastats/blob/main/assets/images/Capture7.PNG" width="100%">
 <img src="https://github.com/PatrickNiyogitare28/covastats/blob/main/assets/images/Capture8.PNG" width="100%">
 
-<h4>Author</h4>
+## Author
 patrickniyogitare28@gmail.com
