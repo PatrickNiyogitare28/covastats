@@ -1,25 +1,7 @@
 import 'package:flutter/material.dart';
-import './breathing_onboarding.dart';
 
-
-class CoughOnBoarding extends StatefulWidget {
-
-  @override
-  _CoughOnBoardingState createState() => _CoughOnBoardingState();
-}
-
-class _CoughOnBoardingState extends State<CoughOnBoarding> {
-  int _selectedIndex = 0;
- 
- void _onItemTapped(int index) {
-   _selectedIndex = index;
-   if(_selectedIndex == 2){
-      Navigator.pushReplacement(context, 
-       MaterialPageRoute(builder: (context) => BreathingOnBoarding()) 
-    );
-   }
- }
-
+class BreathingOnBoarding extends StatelessWidget {
+  final String _description = "Contact your doctor o clinic right away if you have COVID-19, or you liv in or have traveled from an area with ongoing community spread of COVID-19.";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,13 +14,13 @@ class _CoughOnBoardingState extends State<CoughOnBoarding> {
               Container(height: 100,),
               Image.asset("assets/images/breathing-image.png"),
               Container(height: 30,),
-              Text("Cough",
+              Text("Breathing Difficulty",
                style: TextStyle(
                  fontSize:25,
                  fontWeight: FontWeight.bold
                ),
               ),
-               Text("Such as heart or lung deseas o diabets, may be at higher risk of serious illiness. This is similar to what is seen whith other respiratory illinesses, such as influenza",
+               Text(_description,
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
@@ -52,8 +34,7 @@ class _CoughOnBoardingState extends State<CoughOnBoarding> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onItemTapped,
+        
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.business, size: 0),
@@ -78,19 +59,18 @@ class _CoughOnBoardingState extends State<CoughOnBoarding> {
                     height: 13,
                     width: 13,
                     decoration: BoxDecoration(
-                      color: Theme.of(context).primaryColor,
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                  ),
-                  Container(
-                    height: 13,
-                    width: 13,
-                    decoration: BoxDecoration(
                       color: Colors.black12,
                       borderRadius: BorderRadius.circular(20)
                     ),
                   ),
-                
+                 Container(
+                    height: 13,
+                    width: 13,
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).primaryColor,
+                      borderRadius: BorderRadius.circular(20)
+                    ),
+                  ),
                 ],
               ),
             )

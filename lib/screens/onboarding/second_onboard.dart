@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './breathing_onboarding.dart';
 import './cough_onboarding.dart';
 
 class SecondOnboard extends StatefulWidget {
@@ -7,7 +8,7 @@ class SecondOnboard extends StatefulWidget {
 }
 
 class _SecondOnboardState extends State<SecondOnboard> {
-  int _selectedIndex = 0;
+int _selectedIndex = 0;
  
  void _onItemTapped(int index) {
    _selectedIndex = index;
