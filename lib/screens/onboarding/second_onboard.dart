@@ -1,9 +1,27 @@
 import 'package:flutter/material.dart';
+import './breathing_onboarding.dart';
+import './cough_onboarding.dart';
 
-class SecondOnboard extends StatelessWidget {
+class SecondOnboard extends StatefulWidget {
+  @override
+  _SecondOnboardState createState() => _SecondOnboardState();
+}
+
+class _SecondOnboardState extends State<SecondOnboard> {
+int _selectedIndex = 0;
+ 
+ void _onItemTapped(int index) {
+   _selectedIndex = index;
+   if(_selectedIndex == 2){
+      Navigator.pushReplacement(context, 
+       MaterialPageRoute(builder: (context) => CoughOnBoarding()) 
+    );
+   }
+ }
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: Center(
         child: Padding(
@@ -34,7 +52,8 @@ class SecondOnboard extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.business, size: 0),
@@ -76,6 +95,7 @@ class SecondOnboard extends StatelessWidget {
             )
           ),
          BottomNavigationBarItem(
+            
             icon: Icon(Icons.business, size: 0),
             title: Text("Next", style: TextStyle(color: Colors.black),)
           )
