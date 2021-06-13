@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import './breathing_onboarding.dart';
 import './cough_onboarding.dart';
 
 class SecondOnboard extends StatefulWidget {

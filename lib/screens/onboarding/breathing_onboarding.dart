@@ -1,8 +1,27 @@
 import 'package:flutter/material.dart';
 
-class BreathingOnBoarding extends StatelessWidget {
+import '../home/home_page.dart';
+
+class BreathingOnBoarding extends StatefulWidget {
+  @override
+  _BreathingOnBoardingState createState() => _BreathingOnBoardingState();
+}
+
+class _BreathingOnBoardingState extends State<BreathingOnBoarding> {
+  int _selectedIndex = 0;
+ 
+ void _onItemTapped(int index) {
+   _selectedIndex = index;
+   if(_selectedIndex == 2){
+      Navigator.pushReplacement(context, 
+       MaterialPageRoute(builder: (context) => HomePage()) 
+    );
+   }
+ }
+
   final String _description =
       "Contact your doctor o clinic right away if you have COVID-19, or you liv in or have traveled from an area with ongoing community spread of COVID-19.";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +57,8 @@ class BreathingOnBoarding extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+         currentIndex: _selectedIndex,
+         onTap: _onItemTapped,
         items: [
           BottomNavigationBarItem(
               icon: Icon(Icons.business, size: 0),
