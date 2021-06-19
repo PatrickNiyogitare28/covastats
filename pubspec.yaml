@@ -22,7 +22,7 @@ environment:
 
 dependencies:
   charts_flutter: ^0.10.0
-  syncfusion_flutter_charts: ^19.1.67
+  syncfusion_flutter_charts: ^19.1.59
   fl_chart: ^0.35.0
   flutter:
     sdk: flutter

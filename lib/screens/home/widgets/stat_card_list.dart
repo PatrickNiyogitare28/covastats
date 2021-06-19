@@ -2,18 +2,23 @@ import 'package:flutter/material.dart';
 
 import './stat_line_chart.dart';
 
-class StatCardList extends StatelessWidget {
+class 
+StatCardList extends StatelessWidget {
   const StatCardList({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GridView.count(
       crossAxisCount: 2,
+
+      
       children: List.generate(4, (i) {
         return Center(
             child: Padding(
           padding: const EdgeInsets.all(15),
           child: Container(
+            // color: Colors.red,
+            height: 500,
             decoration: BoxDecoration(
               border: Border.all(
                   color: Color.fromRGBO(229, 229, 229, 1), width: 0.5),
