@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'widgets/stat_card_list.dart';
 import './widgets/sfcircular_chart.dart';
+import './widgets/recovery.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -21,7 +22,9 @@ class HomePage extends StatelessWidget {
             Expanded(
               child:  StatCardList()
             ),
-            SFCircularChart(),
+            
+            // SFCircularChart(),
+            Recovery()
           ],
         ),
         
