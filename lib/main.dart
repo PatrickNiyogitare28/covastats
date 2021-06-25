@@ -34,6 +34,8 @@ class MyApp extends StatelessWidget {
           bottomNavigationBarTheme: BottomNavigationBarThemeData(
               backgroundColor: Colors.white, elevation: 0)),
       home: FirstOnboard(),
+
+      
     );
   }
 }
